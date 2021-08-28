@@ -543,6 +543,8 @@ uint8_t CRSF::sendCRSFparam(crsf_frame_type_e frame,uint8_t fieldchunk, crsf_val
 #ifdef PLATFORM_ESP32
     portEXIT_CRITICAL(&FIFOmux);
 #endif
+    
+    DBGLN("elrs:l%did%dc%x",outBuffer[1],outBuffer[5],outBuffer[6]);
     return ((chunks - (fieldchunk+1)));
 }
 

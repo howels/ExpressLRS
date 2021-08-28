@@ -610,6 +610,7 @@ void registerLuaParameters() {
                               //2 = running
                               //3 = request confirmation
       {
+        DBGLN("Wifi Update Q?");
         setLuaCommandInfo(&luaWebUpdate,"REBOOT to cancel");
         setLuaCommandValue(&luaWebUpdate,3); //request confirm
       } else if (arg == 4 || ( (arg > 0 && arg < 4) && (!crsf.elrsLUAmode))) // 4 = request confirmed
